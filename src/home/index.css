@@ -1,0 +1,19 @@
+.root{
+    width: 100vw;
+    height: 100vh;
+    /* background: yellow; */
+    text-align: center;
+    background-image: url('./bg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.title{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#canvas{
+    width: 400px;
+    height: 300px;
+}
