@@ -1,22 +1,24 @@
-import ReactDOM from 'react-dom'
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
-import './index.css'
+import './index.scss'
 
 const AnimFeTurbulence = animated('feTurbulence')   
 const AnimFeDisplacementMap = animated('feDisplacementMap') 
 
-function App() {
+const App = (props)=> {
   const [open, toggle] = useState(false)
   const { freq, scale, transform, opacity } = useSpring({
     reverse: open,
     from: { scale: 10, opacity: 0, transform: 'scale(0.9)', freq: '0.0175, 0.0' },
     to: { scale: 150, opacity: 1, transform: 'scale(1)', freq: '0.0, 0.0' },
-    config: { duration: 5000 }
+    config: { duration: 3000 }
   })
 
   return (
-    <div onClick={() => toggle(!open)} style={{width:'800px', height: '400px'}}>
+    <div onClick={() => {
+        toggle(!open)
+        props.handleClick()
+      }} style={{width:'800px', height: '400px'}}>
       <animated.svg style={{ transform, opacity }} viewBox="0 0 1278 446">
         <defs>
           <filter id="water">

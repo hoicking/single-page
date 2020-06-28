@@ -1,0 +1,17 @@
+.root{
+    width: 100vw;
+    height: 100vh;
+    /* background: yellow; */
+    background-image: url('../assets/img/bg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bgm{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
